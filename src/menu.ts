@@ -70,4 +70,16 @@ type menu=[x:plate, y:plate, z:plate, ...dimensiones:plate[]];
     }  
     return listaGrupoAlimentos;
   }
+  /**
+   * metodo que retorna la suma del precio de cada
+   * plato que compone el menu
+   * @returns retorna el precio total del menu
+   */
+  PrecioTotal() {
+    let precio=0;
+    for (let i = 0; i < this.menus.length; i++) {
+      precio+=this.menus[i].TotalPrice;
+    }  
+    return precio;
+  }
 }
