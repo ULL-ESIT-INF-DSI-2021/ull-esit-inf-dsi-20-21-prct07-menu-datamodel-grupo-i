@@ -22,6 +22,7 @@ export class plate {
       lipidos += this.foods[i].getNutrients()[3] * this.amount[i] / 100;
     }
     this.TotalComposition = [calorias, proteinas, hidratos, lipidos];
+    return this.TotalComposition;
   }
 
   /**
@@ -65,6 +66,7 @@ export class plate {
     } else if (g5 == Math.max(g1, g2, g3, g4, g5)) {
       this.Predominante = "Grupo5";
     }
+    return this.Predominante;
   }
 
   addPrice() {
@@ -73,5 +75,12 @@ export class plate {
       acumulador += this.foods[i].getPrice() * this.amount[i] / 100;
     }
     this.TotalPrice = acumulador;
+  }
+  /**
+   * getter de la categoria del plato
+   * @returns retorna la categoría del plato
+   */
+  getCategory() {
+    return this.category;
   }
 }
