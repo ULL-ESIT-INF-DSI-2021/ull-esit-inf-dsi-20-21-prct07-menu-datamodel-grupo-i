@@ -1,6 +1,7 @@
 /**
  * Clase con la que representamos los alimentos
  */
+type Grupo = "Grupo1" | "Grupo2" | "Grupo3" | "Grupo4" | "Grupo5";
 export class Food {
   /**
    * Constructor de la clase
@@ -12,7 +13,8 @@ export class Food {
    */
   constructor(private readonly name: string,
     private readonly locality: string, private readonly nutrients: number[],
-    private readonly price: number, private readonly group: string) {
+    private readonly price: number, private readonly group: Grupo) {
+
   }
   /**
    * Getter de nombre
@@ -46,7 +48,7 @@ export class Food {
    * Getter de grupo
    * @returns grupo alimenticio
    */
-  public getGroup() : string {
+  public getGroup() : Grupo {
     return this.group;
   }
 }
