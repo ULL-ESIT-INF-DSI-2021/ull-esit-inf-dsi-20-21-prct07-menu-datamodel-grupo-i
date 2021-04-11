@@ -13,12 +13,25 @@ const Cebolla: Food = new Food('Cebolla',
     'España', [33, 1.4, 7, 0], 1.19, 'Grupo2');
 const Plato1 = new Plate('Primer plato',
     [Tomate, Lechuga, Cebolla], [200, 120, 100]);
-const menusesss:menu=[Plato1, Plato1, Plato1];
-const menues= new Menu(menusesss);
+const menu1:menu=[Plato1, Plato1, Plato1];
+const menu11= new Menu(menu1);
+
 describe('Menu function test', () => {
-  menues.write();
-  // it('Creación de objeto plate ', () => {
-  //   expect().not.to.be.equal(null);
-  // });
+  menu11.write();
+  it('Creación de objeto plate ', () => {
+    expect(new Menu(menu1)).not.to.be.equal(null);
+  });
+  it('Comprobación de método precioTotal ', () => {
+    expect(menu11.precioTotal()).to.be.equal(15.99);
+  });
+  it('Comprobación de método comprobarMenu', () => {
+    expect(menu11.comprobarMenu()).to.be.equal(false);
+  });
+  it('Comprobación de método composicionNutricionalMenu', () => {
+    expect(menu11.composicionNutricionalMenu()).eql([279, 15, 45, 0]);
+  });
+  it('Comprobación de método listadoGruposAlimentos', () => {
+    expect(menu11.listadoGruposAlimentos()).eql(["Grupo2", "Grupo2", "Grupo2"]);
+  });
 });
 
