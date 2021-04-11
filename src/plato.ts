@@ -1,11 +1,19 @@
 import {Food} from "./alimento";
-
+/**
+ * Distintas categorías que puede tener un plato
+ */
 type Categoria = "Entrante" | "Primer plato" | "Segundo Plato" | "Postre";
 
 export class Plate {
   private TotalComposition: number[];
   private TotalPrice: number;
   private Predominante: string;
+  /**
+   * Constructor de la clase
+   * @param category La categoria del plato
+   * @param foods Lista de alimentos que componen el plato
+   * @param amount Composición nutricional de cada alimento
+   */
   constructor(private readonly category: Categoria,
     private readonly foods: Food[],
     private readonly amount: number[]) {
@@ -16,7 +24,11 @@ export class Plate {
     this.foodPredominante();
   }
 
-  composition() {
+  /**
+   * Composición nutricional del plato. Suma la composición nutricional
+   * de los alimentos
+   */
+  private composition() {
     let calorias: number = 0;
     let proteinas: number = 0;
     let hidratos: number = 0;
@@ -34,7 +46,7 @@ export class Plate {
   /**
    * Nos permite determinar el grupo de alimento predominante del plato
    */
-  public foodPredominante() {
+  private foodPredominante() {
     let g1: number = 0;
     let g2: number = 0;
     let g3: number = 0;
@@ -77,7 +89,7 @@ export class Plate {
   /**
    * Sumamos el precio de los alimentos, para determinar el precio del plato.
    */
-  addPrice() {
+  private addPrice() {
     let acumulador: number = 0;
     for (let i = 0; i < this.foods.length; i++) {
       acumulador += this.foods[i].getPrice();

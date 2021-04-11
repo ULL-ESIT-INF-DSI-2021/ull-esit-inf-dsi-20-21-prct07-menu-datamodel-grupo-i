@@ -1,6 +1,10 @@
 {
     "entryPoints": [
-        "./src/alimento.ts"
+        "./src/alimento.ts",
+        "./src/plato.ts",
+        "./src/menu.ts",
+        "./src/carta.ts",
+        "./src/comanda.ts"
     ],
     "out": "./documentation"
 } 

@@ -1,7 +1,11 @@
 /**
- * Clase con la que representamos los alimentos
+ * Diferentes grupos a los que puede pertenecer un alimento
  */
 type Grupo = "Grupo1" | "Grupo2" | "Grupo3" | "Grupo4" | "Grupo5";
+
+/**
+ * Clase con la que representamos los alimentos
+ */
 export class Food {
   /**
    * Constructor de la clase
