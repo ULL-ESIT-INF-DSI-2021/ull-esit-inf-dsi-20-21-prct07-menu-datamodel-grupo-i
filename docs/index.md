@@ -12,11 +12,14 @@
 ---------------------
 
 ## Introducción<a name="intro"></a>
-En esta practica grupal tendremos que establecer un diseño orientado a objetos para diseñar menús, creando una serie de clases que nos permitiran emular la estructura. Seguiremos usando lo aprendido en las anteriores practicas como el TypeDoc y TDD, además de los principios SOLID explicados en clase. Tambien empezaremos a utilizar unas nuevas herramientas *Inquirer.js* y *Lowdb* que nos permitiran interactuar con el programa 
+En esta practica grupal tendremos que establecer un diseño orientado a objetos para diseñar menús, creando una serie de clases como son alimento, plato y menú que nos permitiran emular la estructura. Seguiremos usando lo aprendido en las anteriores practicas como el TypeDoc y TDD, además de los principios SOLID explicados en clase. Tambien empezaremos a utilizar unas nuevas herramientas *Inquirer.js* y *Lowdb* que nos permitiran interactuar con el programa de tal forma que se podran crear nuevos platos y menús. 
 
 
 ---------------------
 
+### Clase Alimento
+
+[Clase Alimento](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/src/alimento.ts)
 
 
 ## Coveralls<a name="coveralls"></a>
