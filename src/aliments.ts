@@ -1,4 +1,4 @@
-import {Food} from "./alimento";
+import {Food, Food} from "./alimento";
 
 
 const Almendrado: Food = new Food('Almendrado',
@@ -30,6 +30,15 @@ const NuecesConCascara: Food = new Food('Nueces con cascara',
 
 const CocoRallado: Food = new Food('Coco rallado',
     'España', [373, 3.2, 3.7, 36], 3.29, 'Grupo1');
+
+const Lentejas: Food = new Food('Lentejas', 
+    'España', [310, 24.3, 48.8, 1.9], 1.45, 'Grupo1');
+
+const TerneraChuleta: Food = new Food('Ternera, chuleta',
+    'España', [253, 17, 0, 20.5], 7.40, 'Grupo1');
+
+const Conejo: Food = new Food('Conejo', 
+    'España', [133, 23, 0, 4.6], 5.95, 'Grupo1');
 
 
 
@@ -63,6 +72,18 @@ const Pepino: Food = new Food('Pepino',
 const Repollo: Food = new Food('Repollo', 
     'España', [36, 3.3, 3.4, 0.4], 0.99, 'Grupo2');
 
+const Calabacin: Food = new Food('Calabacin',
+    'España', [14, 0.6, 2.2, 0.2], 1.45, 'Grupo2');
+
+const Champinion: Food = new Food('Champiñon'
+    'España', [31, 1.8, 4, 0.3], 5, 'Grupo2');
+
+const PimientoVerde: Food = new Food('Pimiento Verde',
+    'España', [23, 0.9, 3.7, 0.2], 2.58, 'Grupo2');
+
+const PimientoRojo: Food = new Food('Pimiento Rojo',
+    'España', [37, 1, 6.4, 0.4], 1.75, 'Grupo2');
+
 
 
 const LecheCabra: Food = new Food('Lecha de cabra',
@@ -95,6 +116,9 @@ const QuesoGouda: Food = new Food('Queso Gouda',
 const Helado: Food = new Food('Helado',
     'España', [221, 4.5, 25.4, 10.1], 16.12, 'Grupo3');
 
+const BaticoCacao: Food = new Food('Batido de cacao',
+    'España', [98, 3.8, 10.9, 4.3], 0.85, 'Grupo3'); 
+
 
 
 const Fresa: Food = new Food('Fresa',
@@ -125,4 +149,10 @@ const Pera: Food = new Food('Pera',
     'España', [49, 0.4, 10.6, Tr], 1.33, 'Grupo4');
 
 const Membrillo: Food = new Food('Membrillo',
-    'España', [42, 0.4, 6.8, Tr], , 'Grupo4');
+    'España', [42, 0.4, 6.8, Tr], 2.25, 'Grupo4');
+
+const Aguacate: Food = new Food('Aguacate',
+    'España', [141, 1.5, 5.9, 12], 4, 'Grupo4'); 
+
+const Mango: Food = new Food('Mango',
+    'España', [67, 0.7, 14.1, 0.2], 2.25, 'Grupo4');
