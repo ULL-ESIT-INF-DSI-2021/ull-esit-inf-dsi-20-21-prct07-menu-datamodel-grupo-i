@@ -100,7 +100,8 @@ export class Menu {
    */
   write() {
     for (let i = 0; i < this.menus.length; i++) {
-      console.log('Plato Nº '+(i+1)+' es un '+this.menus[i].getCategory());
+      console.log(this.menus[i].getNombre() +
+        ' es un '+ this.menus[i].getCategory());
       console.table(this.menus[i].getFood());
     }
   }

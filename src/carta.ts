@@ -21,4 +21,13 @@ export class Carta {
   getPlatos() {
     return this.platos;
   }
+
+  write() {
+    this.menus.forEach((objeto) => {
+      objeto.write();
+    });
+    this.platos.forEach((elemento) => {
+      elemento.getInfo();
+    });
+  }
 }

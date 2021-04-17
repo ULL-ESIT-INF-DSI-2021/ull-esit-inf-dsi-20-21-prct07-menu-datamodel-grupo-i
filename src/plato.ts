@@ -12,9 +12,10 @@ export class Plate {
    * Constructor de la clase
    * @param category La categoria del plato
    * @param foods Lista de alimentos que componen el plato
-   * @param amount Composición nutricional de cada alimento
+   * @param amount Cantidad de cada alimento del plato
    */
-  constructor(private readonly category: Categoria,
+  constructor(private readonly nombre: string,
+    private readonly category: Categoria,
     private readonly foods: Food[],
     private readonly amount: number[]) {
     if (this.foods.length==this.amount.length) {
@@ -127,11 +128,24 @@ export class Plate {
     return this.TotalComposition;
   }
 
+  public getNombre(): string {
+    return this.nombre;
+  }
+
   /**
    * Obtenemos el grupo predominante de alimentos que componen el plato
    * @returns El nombre del grupo predominante
    */
   public getPredominant() : string {
     return this.Predominante;
+  }
+
+  getInfo(): string {
+    return `Nombre: ${this.nombre}` + ` Precio: ${this.TotalPrice} € / Kg` +
+      ` Nutrientes (100 g):\n` +
+      ` Calorías: ${this.TotalComposition[0]},` +
+      ` Lipidos: ${this.TotalComposition[1]},` +
+      ` Hidratos: ${this.TotalComposition[2]},` +
+      ` Proteinas: ${this.TotalComposition[3]}`;
   }
 }

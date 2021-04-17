@@ -12,7 +12,7 @@ const Lechuga: Food = new Food('Lechuga',
     'España', [14, 1.34, 1.4, 0.2], 2.39, 'Grupo2');
 const Cebolla: Food = new Food('Cebolla',
     'España', [33, 1.4, 7, 0], 1.19, 'Grupo2');
-const Plato1 = new Plate('Primer plato',
+const Plato1 = new Plate('Ensalada', 'Primer plato',
     [Tomate, Lechuga, Cebolla], [200, 120, 100]);
 const menu1: menu=[Plato1, Plato1, Plato1];
 const menu11 = new Menu(menu1);
