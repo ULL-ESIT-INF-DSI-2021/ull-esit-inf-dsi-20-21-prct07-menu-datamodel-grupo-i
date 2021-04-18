@@ -139,7 +139,10 @@ export class Plate {
   public getPredominant() : string {
     return this.Predominante;
   }
-
+  /**
+   * Obtenemos la información del plato de manera clara.
+   * @returns La información del plato.
+   */
   getInfo(): string {
     return `Nombre: ${this.nombre}` + ` Precio: ${this.TotalPrice} € / Kg` +
       ` Nutrientes (100 g):\n` +

@@ -10,7 +10,7 @@
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
     "test": "nyc mocha",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls && rm -rf .nyc_output",
+    "coverage": "nyc npm test && nyc report --reporter=lcov",
     "doc": "typedoc"
   },
   "repository": {
