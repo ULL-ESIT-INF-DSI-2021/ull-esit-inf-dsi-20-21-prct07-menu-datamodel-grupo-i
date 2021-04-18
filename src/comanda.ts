@@ -1,9 +1,9 @@
-
 import {Plate} from "./plato";
 import {Menu} from "./menu";
+import {Carta} from "./carta";
 
 export class Comanda {
-  constructor(private pedido: Menu | Plate[]) {
+  constructor(private pedido: Menu | Plate[], pivate readonly carta:Carta) {
   }
 
   getPedido(): Menu | Plate[] {
@@ -11,5 +11,8 @@ export class Comanda {
   }
   setPedido(orden: Menu | Plate[]) {
     this.pedido = orden;
+  }
+  writeMenu() {
+    this.
   }
 }
