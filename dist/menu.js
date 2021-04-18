@@ -5,9 +5,6 @@ exports.Menu = void 0;
  * Clase con la que representar el menu
  */
 class Menu {
-    /**
-     * @param menus Lista de platos (minimmo 3 platos por menu)
-     */
     constructor(menus) {
         this.menus = menus;
     }
@@ -32,7 +29,7 @@ class Menu {
                 flagPrimerplato = true;
                 contador++;
             }
-            if (plato.getCategory() == "Segundo Plato" && flagSegundoPlato == false) {
+            if (plato.getCategory() == "Segundo plato" && flagSegundoPlato == false) {
                 flagSegundoPlato = true;
                 contador++;
             }
@@ -42,7 +39,6 @@ class Menu {
             }
         });
         if (contador < 3) {
-            console.log("error");
             return false;
         }
         else {
@@ -67,6 +63,7 @@ class Menu {
             lipidos += this.menus[i].getComposition()[3];
         }
         composicionTotal = [calorias, proteinas, hidratos, lipidos];
+        this.ComposicionTotal = composicionTotal;
         return composicionTotal;
     }
     /**
@@ -91,17 +88,33 @@ class Menu {
         for (let i = 0; i < this.menus.length; i++) {
             precio += this.menus[i].getPrice();
         }
-        return precio;
+        return precio.toFixed(2);
+    }
+    getPlatos() {
+        const aux = [];
+        this.menus.forEach((platos) => {
+            aux.push(platos);
+        });
+        return aux;
     }
     /**
      * Write para imprimir todos los platos de un menu, con
      * los ingredientes de cada uno
      */
-    write() {
+    getInfo() {
+        let aux = ``;
+        aux += 'Precio Total: ' + this.precioTotal() +
+            ', Calorías: ' + this.composicionNutricionalMenu()[0] +
+            ', Lipidos: ' + this.composicionNutricionalMenu()[1] +
+            ', Hidratos: ' + this.composicionNutricionalMenu()[2] +
+            ', Proteinas: ' + this.composicionNutricionalMenu()[3] + '\n';
         for (let i = 0; i < this.menus.length; i++) {
-            console.log('Plato Nº ' + (i + 1) + ' es un ' + this.menus[i].getCategory());
-            console.table(this.menus[i].getFood());
+            aux += this.menus[i].getInfo() + '\n';
         }
+        return aux;
+    }
+    addPlato(plato) {
+        this.menus.push(plato);
     }
 }
 exports.Menu = Menu;

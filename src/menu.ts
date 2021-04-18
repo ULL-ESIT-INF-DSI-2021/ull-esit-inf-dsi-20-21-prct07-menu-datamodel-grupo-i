@@ -3,7 +3,7 @@ import {Plate} from "./plato";
 /**
  * Lista con al menos tres platos
  */
-export type menu=[x:Plate, y:Plate, z:Plate, ...dimensiones:Plate[]];
+export type menu = [x:Plate, y:Plate, z:Plate, ...dimensiones:Plate[]];
 /**
  * Clase con la que representar el menu
  */
@@ -11,6 +11,7 @@ export class Menu {
   /**
    * @param menus Lista de platos (minimmo 3 platos por menu)
    */
+  private ComposicionTotal: number[];
   constructor(private readonly menus:menu) {
   }
   /**
@@ -67,6 +68,7 @@ export class Menu {
       lipidos+= this.menus[i].getComposition()[3];
     }
     composicionTotal = [calorias, proteinas, hidratos, lipidos];
+    this.ComposicionTotal = composicionTotal;
     return composicionTotal;
   }
   /**
@@ -93,15 +95,33 @@ export class Menu {
     }
     return precio.toFixed(2);
   }
+  getPlatos() {
+    const aux: Plate[] = [];
+    this.menus.forEach((platos) => {
+      aux.push(platos);
+    });
+    return aux;
+  }
   /**
    * Write para imprimir todos los platos de un menu, con
    * los ingredientes de cada uno
    */
+
   getInfo(): string {
-    let aux: string = '';
+    let aux: string = ``;
+    aux += 'Precio Total: ' + this.precioTotal() +
+    ', Calorías: ' + this.composicionNutricionalMenu()[0] +
+    ', Lipidos: ' + this.composicionNutricionalMenu()[1] +
+    ', Hidratos: ' + this.composicionNutricionalMenu()[2] +
+    ', Proteinas: ' + this.composicionNutricionalMenu()[3] + '\n';
+
     for (let i = 0; i < this.menus.length; i++) {
       aux += this.menus[i].getInfo() + '\n';
     }
+
     return aux;
+  }
+  addPlato(plato:Plate) {
+    this.menus.push(plato);
   }
 }

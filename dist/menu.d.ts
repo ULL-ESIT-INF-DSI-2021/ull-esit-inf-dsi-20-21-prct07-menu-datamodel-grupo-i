@@ -11,6 +11,7 @@ export declare class Menu {
     /**
      * @param menus Lista de platos (minimmo 3 platos por menu)
      */
+    private ComposicionTotal;
     constructor(menus: menu);
     /**
      * Comprueba que el menu cumple con almenos 3 categorias diferentes
@@ -34,10 +35,12 @@ export declare class Menu {
      * plato que compone el menu
      * @returns retorna el precio total del menu
      */
-    precioTotal(): number;
+    precioTotal(): string;
+    getPlatos(): Plate[];
     /**
      * Write para imprimir todos los platos de un menu, con
      * los ingredientes de cada uno
      */
-    write(): void;
+    getInfo(): string;
+    addPlato(plato: Plate): void;
 }

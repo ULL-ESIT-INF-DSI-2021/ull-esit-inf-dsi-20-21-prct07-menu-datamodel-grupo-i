@@ -6,9 +6,10 @@ class Plate {
      * Constructor de la clase
      * @param category La categoria del plato
      * @param foods Lista de alimentos que componen el plato
-     * @param amount Composición nutricional de cada alimento
+     * @param amount Cantidad de cada alimento del plato
      */
-    constructor(category, foods, amount) {
+    constructor(nombre, category, foods, amount) {
+        this.nombre = nombre;
         this.category = category;
         this.foods = foods;
         this.amount = amount;
@@ -122,11 +123,30 @@ class Plate {
         return this.TotalComposition;
     }
     /**
+     * Obtenemos el nombre del plato
+     * @returns Nombre del plato
+     */
+    getNombre() {
+        return this.nombre;
+    }
+    /**
      * Obtenemos el grupo predominante de alimentos que componen el plato
      * @returns El nombre del grupo predominante
      */
     getPredominant() {
         return this.Predominante;
+    }
+    /**
+     * Obtenemos la información del plato de manera clara.
+     * @returns La información del plato.
+     */
+    getInfo() {
+        return `${this.nombre}` + ` Precio: ${this.TotalPrice} € / Kg` +
+            ` Nutrientes (100 g):\n` +
+            ` Calorías: ${this.TotalComposition[0]},` +
+            ` Lipidos: ${this.TotalComposition[1]},` +
+            ` Hidratos: ${this.TotalComposition[2]},` +
+            ` Proteinas: ${this.TotalComposition[3]}`;
     }
 }
 exports.Plate = Plate;

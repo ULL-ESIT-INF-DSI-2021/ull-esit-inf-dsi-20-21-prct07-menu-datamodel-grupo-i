@@ -55,6 +55,15 @@ class Food {
     getGroup() {
         return this.group;
     }
+    getInfo() {
+        return `Nombre: ${this.name},` + ` Origen: ${this.locality},` +
+            ` Precio: ${this.price} €/kg,` + ` ${this.group},` +
+            ` Nutrientes (100 g):\n` +
+            ` Calorías: ${this.nutrients[0]},` +
+            ` Lipidos: ${this.nutrients[1]},` +
+            ` Hidratos: ${this.nutrients[2]},` +
+            ` Proteinas: ${this.nutrients[3]}`;
+    }
 }
 exports.Food = Food;
 //# sourceMappingURL=alimento.js.map

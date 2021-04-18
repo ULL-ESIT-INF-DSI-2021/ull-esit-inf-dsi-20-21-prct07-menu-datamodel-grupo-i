@@ -2,8 +2,9 @@ import { Food } from "./alimento";
 /**
  * Distintas categorías que puede tener un plato
  */
-declare type Categoria = "Entrante" | "Primer plato" | "Segundo Plato" | "Postre";
+declare type Categoria = "Entrante" | "Primer plato" | "Segundo plato" | "Postre";
 export declare class Plate {
+    private readonly nombre;
     private readonly category;
     private readonly foods;
     private readonly amount;
@@ -14,9 +15,9 @@ export declare class Plate {
      * Constructor de la clase
      * @param category La categoria del plato
      * @param foods Lista de alimentos que componen el plato
-     * @param amount Composición nutricional de cada alimento
+     * @param amount Cantidad de cada alimento del plato
      */
-    constructor(category: Categoria, foods: Food[], amount: number[]);
+    constructor(nombre: string, category: Categoria, foods: Food[], amount: number[]);
     /**
      * Composición nutricional del plato. Suma la composición nutricional
      * de los alimentos
@@ -52,9 +53,19 @@ export declare class Plate {
      */
     getComposition(): number[];
     /**
+     * Obtenemos el nombre del plato
+     * @returns Nombre del plato
+     */
+    getNombre(): string;
+    /**
      * Obtenemos el grupo predominante de alimentos que componen el plato
      * @returns El nombre del grupo predominante
      */
     getPredominant(): string;
+    /**
+     * Obtenemos la información del plato de manera clara.
+     * @returns La información del plato.
+     */
+    getInfo(): string;
 }
 export {};

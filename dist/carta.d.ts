@@ -5,7 +5,12 @@ import { Plate } from "./plato";
  */
 export declare class Carta {
     menus: Menu[];
-    private readonly platos;
+    platos: Plate[];
+    /**
+     * Constructor de la clase
+     * @param menus Menus de la carta
+     * @param platos Platos de la carta
+     */
     constructor(menus: Menu[], platos: Plate[]);
     /**
      * getter de los menus que contiene la carta
@@ -18,4 +23,10 @@ export declare class Carta {
      * @returns Platos de la carta
      */
     getPlatos(): Plate[];
+    /**
+     * Nos proporciona una visualización mas clara de
+     * los platos y menus de la carta
+     */
+    getInfoMenu(): void;
+    getInfoPlato(): void;
 }

@@ -45,5 +45,6 @@ export declare class Food {
      * @returns grupo alimenticio
      */
     getGroup(): Grupo;
+    getInfo(): string;
 }
 export {};

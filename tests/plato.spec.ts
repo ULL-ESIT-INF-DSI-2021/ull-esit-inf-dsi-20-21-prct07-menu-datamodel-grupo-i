@@ -34,6 +34,6 @@ describe('Plate function test', () => {
   });
   it('Comprobación de getInfo', () => {
     // eslint-disable-next-line max-len
-    expect(Plato.Ensalada.getInfo()).to.be.equal('Nombre: Ensalada Precio: 5.5 € / Kg Nutrientes (100 g):\n Calorías: 93, Lipidos: 4, Hidratos: 15, Proteinas: 0');
+    expect(Plato.Ensalada.getInfo()).to.be.equal('Ensalada Precio: 5.5 € / Kg Nutrientes (100 g):\n Calorías: 93, Lipidos: 4, Hidratos: 15, Proteinas: 0');
   });
 });

@@ -148,7 +148,7 @@ export class Plate {
    * @returns La información del plato.
    */
   getInfo(): string {
-    return `Nombre: ${this.nombre}` + ` Precio: ${this.TotalPrice} € / Kg` +
+    return `${this.nombre}` + ` Precio: ${this.TotalPrice} € / Kg` +
       ` Nutrientes (100 g):\n` +
       ` Calorías: ${this.TotalComposition[0]},` +
       ` Lipidos: ${this.TotalComposition[1]},` +
