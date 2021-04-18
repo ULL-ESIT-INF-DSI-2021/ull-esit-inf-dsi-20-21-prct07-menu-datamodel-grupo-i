@@ -18,11 +18,12 @@ En esta practica grupal tendremos que establecer un diseño orientado a objetos 
 
 ## Desarrollo<a name="desarrollo"></a>
 
-### Clase Alimento### Clase Terminal
+### Clase Alimento
 
 Aqui se indican los enlaces para ver el contenido de la clase Terminal y sus respectivas pruebas.
 
 [Clase Terminal](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/src/terminal.ts)
+
 [Pruebas de la clase](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/tests/plato.spec.ts)
 
 En esta clase vamos a modelar un alimento/ingrediente que sera la clase básica que necesitaremos. La clase es muy simple teniendo solo el constructor y los getters para cada atributo de la clase. Además esta clase tendra un tipo de dato que nos permetira determinar el grupo al que pertenece el alimento.
@@ -30,6 +31,7 @@ En esta clase vamos a modelar un alimento/ingrediente que sera la clase básica 
 Aqui se indican los enlaces para ver el contenido de la clase Alimento y sus respectivas pruebas.
 
 [Clase Alimento](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/src/alimento.ts)
+
 [Pruebas de la clase](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/tests/alimento.spec.ts)
 
 ### Clase Plato
@@ -46,6 +48,7 @@ Por ultimo tenemos los respectivos getters de la clase para cada atributo.
 Aqui se indican los enlaces para ver el contenido de la clase Plato y sus respectivas pruebas.
 
 [Clase Plato](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/src/plato.ts)
+
 [Pruebas de la clase](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/tests/plato.spec.ts)
 
 ### Clase Menu
@@ -63,6 +66,7 @@ Por ultimo tenemos los respectivos getters de la clase para cada atributo.
 Aqui se indican los enlaces para ver el contenido de la clase Menu y sus respectivas pruebas.
 
 [Clase Menu](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/src/menu.ts)
+
 [Pruebas de la clase](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/tests/menu.spec.ts)
 
 ### Clase Carta
@@ -72,6 +76,7 @@ Esta clase estara compuesta por Menus y Platos. Simplemente tendra sus respectiv
 Aqui se indican los enlaces para ver el contenido de la clase Carta y sus respectivas pruebas.
 
 [Clase Carta](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/src/carta.ts)
+
 [Pruebas de la clase](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/tests/carta.spec.ts)
 
 ### Clase Comanda
@@ -79,8 +84,19 @@ Aqui se indican los enlaces para ver el contenido de la clase Carta y sus respec
 Aqui se indican los enlaces para ver el contenido de la clase Comanda y sus respectivas pruebas.
 
 [Clase Comanda](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/src/comanda.ts)
+
 [Pruebas de la clase](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/tests/comanda.spec.ts)
 
+### Base de Datos
+
+Se crearan una serie de ficheros en *src/database* que contendran los diferentes objetos prediseñados de cada clase. Los ficheros son:
+
+- *aliments.ts*: contiene todos los alimentos prediseñados de acuerdo al recurso facilitado por el profesorado en el guion de la practica. El recurso es el siguiente: [recurso](https://drive.google.com/file/d/1B-jULJvgWmphWsZV1e3BG0fGL77jokSZ/view?usp=sharing)
+- *dishes.ts*: contiene todos los platos prediseñados en función a los alimentos del fichero *aliments.ts*.
+- *menus.ts*: contiene todos los menus prediseñados en función a los platos del fichero *dishes.ts*.
+- *carta.ts*: contiene la carta que esta compuesta por los menus y platos de los ficheros *menus.ts* y *dishes.ts* respectivamente.
+
+[Base de Datos](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-i/blob/master/src/database)
 
 
 ## Coveralls<a name="coveralls"></a>
@@ -106,4 +122,4 @@ Resultados del Coveralls:
 - [Chai](https://www.chaijs.com/)
 - [Istanbul](https://istanbul.js.org/)
 - [Coveralls](https://coveralls.io/)
-- [Guión de la práctica](https://ull-esit-inf-dsi-2021.github.io/prct06-generics-solid/)
+- [Guión de la práctica](https://ull-esit-inf-dsi-2021.github.io/prct07-menu-dataModel/)

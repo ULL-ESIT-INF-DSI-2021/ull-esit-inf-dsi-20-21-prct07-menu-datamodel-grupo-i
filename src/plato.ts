@@ -2,7 +2,7 @@ import {Food} from "./alimento";
 /**
  * Distintas categorías que puede tener un plato
  */
-type Categoria = "Entrante" | "Primer plato" | "Segundo Plato" | "Postre";
+type Categoria = "Entrante" | "Primer plato" | "Segundo plato" | "Postre";
 
 export class Plate {
   private TotalComposition: number[];
@@ -128,6 +128,10 @@ export class Plate {
     return this.TotalComposition;
   }
 
+  /**
+   * Obtenemos el nombre del plato
+   * @returns Nombre del plato
+   */
   public getNombre(): string {
     return this.nombre;
   }

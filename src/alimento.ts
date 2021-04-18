@@ -55,4 +55,14 @@ export class Food {
   public getGroup() : Grupo {
     return this.group;
   }
+
+  public getInfo(): string {
+    return `Nombre: ${this.name},` + ` Origen: ${this.locality},` +
+    ` Precio: ${this.price} €/kg,` + ` ${this.group},` +
+    ` Nutrientes (100 g):\n` +
+    ` Calorías: ${this.nutrients[0]},` +
+    ` Lipidos: ${this.nutrients[1]},` +
+    ` Hidratos: ${this.nutrients[2]},` +
+    ` Proteinas: ${this.nutrients[3]}`;
+  }
 }

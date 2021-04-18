@@ -4,6 +4,11 @@ import {Plate} from "./plato";
  * Clase que representa una Carta respecto a una serie de munús prediseñados
  */
 export class Carta {
+  /**
+   * Constructor de la clase
+   * @param menus Menus de la carta
+   * @param platos Platos de la carta
+   */
   constructor(public menus:Menu[], private readonly platos:Plate[]) {
   }
   /**
@@ -22,9 +27,13 @@ export class Carta {
     return this.platos;
   }
 
-  write() {
+  /**
+   * Nos proporciona una visualización mas clara de
+   * los platos y menus de la carta
+   */
+  getInfo() {
     this.menus.forEach((objeto) => {
-      objeto.write();
+      objeto.getInfo();
     });
     this.platos.forEach((elemento) => {
       elemento.getInfo();
